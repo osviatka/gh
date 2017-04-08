@@ -1,32 +1,53 @@
 /**Components**/
+.site-header {
+  background-color: #2c3e50;
+  padding: 20px 0; }
+
 .header-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap; }
 
-.site-title {
+.title {
   font-size: 36px;
   font-weight: 700; }
-  .site-title a {
-    padding-left: 61px;
-    color: #ffffff; }
+  .title a {
+    color: #ffffff;
+    padding-left: 61px; }
 
-.header-und {
+.header-under {
   position: relative;
+  color: #ff4848;
   text-transform: lowercase; }
-  .header-und a:before {
+  .header-under a:before {
     position: absolute;
-    content: '';
     top: 5px;
-    left: -99px;
+    left: -100px;
     width: 40px;
     height: 40px;
-    background-color: #2c3e50;
+    content: '';
+    background-color: #ff4848;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
+    .header-under a:before::after {
+      position: absolute;
+      content: '';
+      top: 5px;
+      left: -95px;
+      width: 40px;
+      height: 40px;
+      background-color: #2c3e50;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
 
-.header-nav li {
-  font-size: 5px; }
+.header-navigation li {
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-left: 30px; }
+  .header-navigation li a {
+    color: #fff; }
+    .header-navigation li a li.current_page_item a {
+      color: #ff4848; }
 
 body {
   font-family: 'Roboto'; }
