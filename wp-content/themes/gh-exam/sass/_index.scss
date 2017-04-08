@@ -1,0 +1,47 @@
+.banner-wrapper{
+  position: relative;
+  h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-translate:(-50%, -50%);
+    color: #fff;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+  .banner-img{
+    width: 200px;
+    &:after{
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, .3);
+    }
+  }
+  img{
+    min-width: 100%;
+    min-height: 200px;
+    .banner-wrapper{
+      max-height: 400px;
+      background: #000;
+      overflow: hidden;
+      img{
+        width: 100%
+      }
+
+    }
+  }
+}
+.section-content{
+  padding-top: 60px;
+}
+.entry-post{
+
+}
+.entry-post-content{
+
+}
