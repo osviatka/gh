@@ -14,7 +14,7 @@
 		<header class="entry-header">
 
 
-			<?php if ( has_post_thumbnail() ) { :
+			<?php if ( has_post_thumbnail() ) {:
 				the_post_thumbnail( 'post_thumbnail' );
 			}else {?>
 				<img src="><?php echo get_template_directory_url(); ?>/image-here.png">
@@ -22,9 +22,15 @@
 
 			<div class="entry-post-content">
 				<h2><a href="<?php echo get_permalink(); ?>" ><?php the_title ?></a></h2>
-
+				<?php  the_excerpt(); ?>
 				</div>
-			
+
+			<div class="entry-post-date">
+
+			</div>
+
+
+
 
 			if ( 'post' === get_post_type() ) : ?>
 			<div class="entry-meta">

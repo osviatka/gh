@@ -154,3 +154,19 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 //
+
+function add_attach( $wp_customize ) {
+    $wp_customize->add_section( 'add_attach', array(
+        'title' => 'Add Attach',
+        'priority' => 4,
+    ));
+    $wp_customize->add_setting( 'add_attach_img', array() );
+    $wp_customize->add_control( new WP_Customize_Cropped_Image_Control( $wp_customize, 'box_welcome_img_control', array(
+        'label' => 'Image',
+        'section' => 'add_attach',
+        'settings' => 'add_attach_img',
+        'width' => 338,
+        'height' => 511
+    )));
+}
+add_action( 'customize_register', 'add_attach' );

@@ -15,11 +15,11 @@
 get_header(); ?>
 
 
-	<?php if ( is_home()  ) : ?>
+	<?php if ( is_home() ) : ?>
 	<div class="banner-wrapper">
 		<div class="image-section">
 
-		<img src="><?php echo get_template_directory_url(); ?>/banner-img.png">
+		<img src="><?php echo get_template_directory_url(); ?>/banner.png">
 		</div>
 		<h2>Blog posts</h2>
 
@@ -27,48 +27,56 @@ get_header(); ?>
 
 	<?php endif; ?>
 
-	<div class="section-content"></div>
+	<div class="content-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-lg-8">
 
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12 col-lg-8">
+					<div id="primary" class="content-area">
+						<main id="main" class="site-main" role="main">
+							<div class="row">
 
-				<div id="primary" class="content-area">
-					<main id="main" class="site-main" role="main">
+								<?php
+								if ( have_posts() ) :
+									while ( have_posts() ) : the_post();
 
-					<?php
-					if ( have_posts() ) :
-						while ( have_posts() ) : the_post();
+										get_template_part( 'template-parts/content', get_post_format() );
 
+									endwhile; ?>
 
-							get_template_part( 'template-parts/content', get_post_format() );
+									<div class="blog-pagination col-12">
+										<?php the_posts_pagination( array(
+											'prev_text'     => __( 'Previous page' ),
+											'next_text'     => __( 'Next page' ),
+											'prev_next'     => false
+										) ); ?>
+									</div>
 
-						endwhile;
+								<?php else :
 
-						the_posts_navigation();
-					else :
+									get_template_part( 'template-parts/content', 'none' );
 
-						get_template_part( 'template-parts/content', 'none' );
+								endif; ?>
 
-					endif; ?>
+							</div>
 
+						</main><!-- #main -->
+					</div><!-- #primary -->
 
+				</div><!-- columns -->
 
+				<div class="col-md-12 col-lg-4">
 
+					<?php get_sidebar(); ?>
 
-
-
-
-
-
-
-					</main><!-- #main -->
-				</div><!-- #primary -->
-
-			</div><!-- col-md-12 col-lg-8 -->
+				</div>
+			</div>
 		</div>
+	</div>
+	<div class="col-md-12 col-lg-4">
+		<?php get_sidebar(); ?>
 	</div>
 
 <?php
-get_sidebar();
+get_footer();
 get_footer();

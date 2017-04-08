@@ -31,29 +31,20 @@
 				<div class="col-12 header-wrapper">
 					<div class="heading">
 						<h1 class="title">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?><span class=""><?php echo get_theme_mod('header_title_edit_section'); ?></span> </a></h1>
+							<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?><span class=""><?php echo get_theme_mod('header_title_edit_section'); ?></span> </a></h1>
 					</div>
 
-					<div class="site-branding">
-						<?php
-						if ( is_front_page() && is_home() ) : ?>
-							<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-						<?php else : ?>
-							<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-						<?php
-						endif;
 
-						$description = get_bloginfo( 'description', 'display' );
-						if ( $description || is_customize_preview() ) : ?>
-							<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-						<?php
-						endif; ?>
-					</div><!-- .site-branding -->
 
 					<nav id="site-navigation" class="main-navigation" role="navigation">
-						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'gh-exam' ); ?></button>
-						<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
+						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'blogunder' ); ?></button>
+						<?php wp_nav_menu( array(
+							'theme_location' => 'menu-1',
+							'menu_id' => 'primary-menu'
+						) ); ?>
 					</nav><!-- #site-navigation -->
+
+
 				</div>
 			</div>
 	</header><!-- #masthead -->
