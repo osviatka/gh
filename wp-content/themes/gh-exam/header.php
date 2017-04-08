@@ -42,7 +42,7 @@
 								?>
 							</nav><!-- #site-navigation -->
 						</div>
-					</div><!-- .header-box -->
+					</div><!-- .header-wrapper -->
 
 				</div>
 			</div>

@@ -18,6 +18,20 @@
 
   }
 }
+.header-navigation {
+  li {
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-left: 30px;
+    a {
+      color: #fff;
+      li.current_page_item a {
+        color: #ff4848;
+      }
+    }
+  }
+}
 .header-under{
   position: relative;
   color: #ff4848;
@@ -43,20 +57,7 @@
     }
   }
 }
-.header-navigation {
-  li {
-    font-size: 18px;
-    font-weight: 400;
-    text-transform: uppercase;
-    margin-left: 30px;
-    a {
-      color: #fff;
-      li.current_page_item a {
-        color: #ff4848;
-      }
-    }
-  }
-}
+
 
 
 

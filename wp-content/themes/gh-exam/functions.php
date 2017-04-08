@@ -160,13 +160,37 @@ function add_attach( $wp_customize ) {
         'title' => 'Add Attach',
         'priority' => 4,
     ));
-    $wp_customize->add_setting( 'add_attach_img', array() );
-    $wp_customize->add_control( new WP_Customize_Cropped_Image_Control( $wp_customize, 'box_welcome_img_control', array(
+    $wp_customize->add_setting( 'add_attach_img1', array() );
+    $wp_customize->add_control( new WP_Customize_Cropped_Image_Control( $wp_customize, 'add_attach_img_control1', array(
         'label' => 'Image',
         'section' => 'add_attach',
-        'settings' => 'add_attach_img',
-        'width' => 338,
-        'height' => 511
+        'settings' => 'add_attach_img1',
+        'width' => 511,
+        'height' => 338
+    )));
+    $wp_customize->add_setting( 'add_attach_img2', array() );
+    $wp_customize->add_control( new WP_Customize_Cropped_Image_Control( $wp_customize, 'add_attach_img_control2', array(
+        'label' => 'Image',
+        'section' => 'add_attach',
+        'settings' => 'add_attach_img2',
+        'width' => 511,
+        'height' => 338
+    )));
+    $wp_customize->add_setting( 'add_attach_img3', array() );
+    $wp_customize->add_control( new WP_Customize_Cropped_Image_Control( $wp_customize, 'add_attach_img_control3', array(
+        'label' => 'Image',
+        'section' => 'add_attach',
+        'settings' => 'add_attach_img3',
+        'width' => 511,
+        'height' => 338
+    )));
+    $wp_customize->add_setting( 'add_attach_img4', array() );
+    $wp_customize->add_control( new WP_Customize_Cropped_Image_Control( $wp_customize, 'add_attach_img_control4', array(
+        'label' => 'Image',
+        'section' => 'add_attach',
+        'settings' => 'add_attach_img4',
+        'width' => 511,
+        'height' => 338
     )));
 }
 add_action( 'customize_register', 'add_attach' );
