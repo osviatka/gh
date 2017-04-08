@@ -31,7 +31,10 @@
 				<div class="col-12 header-wrapper">
 					<div class="heading">
 						<h1 class="title">
-							<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?><span class=""><?php echo get_theme_mod('header_title_edit_section'); ?></span> </a></h1>
+
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?><span class=""><?php echo get_theme_mod('header_title_edit_section'); ?></span> </a></h1>
+
+
 					</div>
 
 

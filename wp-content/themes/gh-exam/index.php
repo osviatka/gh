@@ -19,7 +19,7 @@ get_header(); ?>
 	<div class="banner-wrapper">
 		<div class="image-section">
 
-		<img src="><?php echo get_template_directory_url(); ?>/banner.png">
+			<img src="><?php echo get_template_directory_url(); ?>/banner.png">
 		</div>
 		<h2>Blog posts</h2>
 
